@@ -4,5 +4,7 @@ services:
     build:
       context: docker
       dockerfile: Dockerfile
+    container_name: hw
+    env_file: .env
     volumes:
-      - ./src:/var/cpp/
+      - ./src:/var/cpp/hw

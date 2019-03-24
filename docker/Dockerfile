@@ -10,10 +10,10 @@ RUN apt-get install -y mesa-common-dev
 RUN apt-get install -y freeglut3-dev
 
 # download source
-RUN wget -O src.tar http://www.csce.uark.edu/~jgauch/4813/src/src.tar
-RUN tar -xvf src.tar
-RUN cd /var/cpp/src/jpg && make clean && make
-RUN cd /var/cpp/src/libim && make clean && make
+RUN wget -O /var/cpp/src.tar http://www.csce.uark.edu/~jgauch/4813/src/src.tar
+RUN tar -xvf /var/cpp/src.tar
+# RUN cd /var/cpp/src/jpg && make clean && make
+# RUN cd /var/cpp/src/libim && make clean && make
 RUN cd /var/cpp/src && make
 
 # docker execution
